@@ -1,3 +1,10 @@
+import sys
+import urllib.request
+response = urllib.request.urlopen(sys.argv[1])
+lines = response.read().decode("utf8").splitlines()
+
+
+
 def tokenize(lines: list) -> list:
     words = []
     for line in lines:
@@ -50,3 +57,6 @@ def printTopMost(frequencies: dict, n: int) -> None:
     if not n > len(value_pairs):
         for i in range(n):
             print(sorted_value_pairs[i][0].ljust(20) + str(sorted_value_pairs[i][1]).rjust(5))
+
+
+print(tokenize(lines))

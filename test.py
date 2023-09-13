@@ -2,6 +2,7 @@ import io
 import sys
 import importlib.util
 
+
 def test(fun,x,y):
 	global pass_tests, fail_tests
 	if type(x) == tuple:
