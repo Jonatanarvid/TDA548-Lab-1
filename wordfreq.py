@@ -1,5 +1,4 @@
 import sys
-import urllib.request
 
 def tokenize(lines: list) -> list:
     words = []
